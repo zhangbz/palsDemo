@@ -4,7 +4,6 @@ import com.zhangbz.pals.R;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RelativeLayout;
@@ -20,9 +19,6 @@ public class SettingItemView extends RelativeLayout {
 	private CheckBox cb_status;
 	private TextView tv_desc;
 	private TextView tv_title;
-	
-	private String desc_on;
-	private String desc_off;
 
 	private void initView(Context context) {
 		//布局文件-->view，并且加载到SettingItemView
@@ -44,11 +40,6 @@ public class SettingItemView extends RelativeLayout {
 	public SettingItemView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		initView(context);
-		String title = attrs.getAttributeValue("http://schemas.android.com/apk/res/com.zhangbz.pals", "title");
-		desc_on = attrs.getAttributeValue("http://schemas.android.com/apk/res/com.zhangbz.pals", "desc_on");
-		desc_off = attrs.getAttributeValue("http://schemas.android.com/apk/res/com.zhangbz.pals", "desc_off");
-		tv_title.setText(title);
-		setDesc(desc_on);
 	}
 
 	public SettingItemView(Context context) {
@@ -67,11 +58,6 @@ public class SettingItemView extends RelativeLayout {
 	 * 设置组合控件的状态
 	 */
 	public void setChecked(boolean checked) {
-		if (checked) {
-			setDesc(desc_on);
-		} else {
-			setDesc(desc_off);
-		} 
 		cb_status.setChecked(checked);
 	}
 	

@@ -61,7 +61,7 @@ public class SplashActivity extends Activity {
 		tv_splash_version = (TextView) findViewById(R.id.tv_splash_version);
 		tv_splash_version.setText("版本号： " + getVersionName());
 		tv_update_info = (TextView) findViewById(R.id.tv_update_info);
-		boolean update = sp.getBoolean("update", false);
+		boolean update = sp.getBoolean("update", true);
 		if (update) {
 			//检查升级
 			checkUpdate();
@@ -74,7 +74,7 @@ public class SplashActivity extends Activity {
 					//进入主页面
 					enterHome();
 				}
-			}, 20000);
+			}, 2000);
 		} 
 
 		AlphaAnimation aa = new AlphaAnimation(0.2f, 1.0f);

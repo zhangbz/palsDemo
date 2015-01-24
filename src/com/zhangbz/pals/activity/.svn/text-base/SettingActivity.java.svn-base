@@ -22,7 +22,7 @@ public class SettingActivity extends Activity {
 		sp = getSharedPreferences("config", MODE_PRIVATE);
 		//初始设置是否开启自动更新
 		siv_update = (SettingItemView) findViewById(R.id.siv_update);
-		boolean update = sp.getBoolean("update", true);
+		boolean update = sp.getBoolean("update", false);
 		if (update) {
 			//自动升级已经开启
 			siv_update.setChecked(true);
@@ -39,10 +39,12 @@ public class SettingActivity extends Activity {
 				//已经打开自动升级了
 				if (siv_update.isChecked()) {
 					siv_update.setChecked(false);
+					siv_update.setDesc("自动更新已经关闭");
 					editor.putBoolean("update", false);
 				} else {
 					//没有打开自动升级的话
 					siv_update.setChecked(true);
+					siv_update.setDesc("自动更新已经开启");
 					editor.putBoolean("update", true);
 				}
 				editor.commit();
