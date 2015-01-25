@@ -33,6 +33,7 @@
         <activity android:name="com.zhangbz.pals.activity.setup2Activity" />
         <activity android:name="com.zhangbz.pals.activity.setup3Activity" />
         <activity android:name="com.zhangbz.pals.activity.LoginActivity"/>
+        <activity android:name="com.zhangbz.pals.activity.RegisterActivity"></activity>
     </application>
 
 </manifest>

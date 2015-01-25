@@ -8,23 +8,31 @@
         android:id="@+id/textView1"
         android:layout_width="fill_parent"
         android:layout_height="55dip"
-        android:gravity="center"
-        android:textSize="22sp"
-        android:textColor="#000"
         android:background="#8866ff00"
-        android:text="搜索栏" />
+        android:gravity="center"
+        android:text="搜索栏"
+        android:textColor="#000"
+        android:textSize="22sp" />
 
     <com.zhangbz.pals.ui.FocusedTextView
-        android:focusableInTouchMode="true"
-        android:ellipsize="marquee"
-        android:singleLine="true"
-        android:textSize="18sp"
-        android:text="哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈啊哈哈哈哈"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <GridView 
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:text="哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈啊哈哈哈哈"
+        android:textSize="18sp" />
+
+    <GridView
         android:id="@+id/list_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:numColumns="3" />
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        layout="@layout/bottom_bar" />
+
 </LinearLayout>
