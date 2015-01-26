@@ -11,12 +11,17 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <instrumentation 
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.zhangbz.pals">
+    </instrumentation>
     <application
         android:name="com.zhangbz.pals.util.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner"/>
         <activity
             android:name="com.zhangbz.pals.activity.SplashActivity"
             android:label="@string/app_name" >
