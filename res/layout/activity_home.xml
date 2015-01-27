@@ -4,22 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <include layout="@layout/top" />
 
-    <FrameLayout
-        android:id="@+id/id_content"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" >
-
-        <GridView
-            android:id="@+id/list_home"
-            android:layout_width="match_parent"
-            android:layout_height="0dip"
-            android:layout_weight="1"
-            android:numColumns="3" />
-    </FrameLayout>
-    <!--
+    
          <TextView
         android:id="@+id/textView1"
         android:layout_width="fill_parent"
@@ -29,10 +15,9 @@
         android:text="搜索栏"
         android:textColor="#000"
         android:textSize="22sp" />
-    -->
 
 
-    <!--
+
          <com.zhangbz.pals.ui.FocusedTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,15 +26,15 @@
         android:singleLine="true"
         android:text="哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈啊哈哈哈哈"
         android:textSize="18sp" />
-    -->
-    <!--
+
+
          <GridView
         android:id="@+id/list_home"
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
         android:numColumns="3" />
-    -->
+
 
     <include
         android:layout_width="match_parent"
